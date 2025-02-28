@@ -39,12 +39,12 @@
     "lucide-react": "^0.475.0",
     "react": "^18.3.1",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "@keycloakify/email-native": "~260007.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
     "@eslint/js": "^9.20.0",
-    "@keycloakify/email-native": "~260007.0.0",
     "@patternfly/patternfly": "^6.1.0",
     "@patternfly/react-core": "^6.1.0",
     "@patternfly/react-icons": "^6.1.0",
