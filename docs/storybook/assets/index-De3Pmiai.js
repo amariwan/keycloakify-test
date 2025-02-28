@@ -1,0 +1,6 @@
+import{c as h}from"./createLucideIcon-C49h6iyD.js";import{r as u}from"./index-BlmOqGMO.js";import{u as d,b}from"./index-Cnu3ZVWt.js";/**
+ * @license lucide-react v0.475.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const S=[["path",{d:"M20 6 9 17l-5-5",key:"1gmf2c"}]],k=h("Check",S);function A({prop:e,defaultProp:i,onChange:r=()=>{}}){const[t,o]=v({defaultProp:i,onChange:r}),s=e!==void 0,a=s?e:t,c=d(r),f=u.useCallback(n=>{if(s){const l=typeof n=="function"?n(e):n;l!==e&&c(l)}else o(n)},[s,e,o,c]);return[a,f]}function v({defaultProp:e,onChange:i}){const r=u.useState(e),[t]=r,o=u.useRef(t),s=d(i);return u.useEffect(()=>{o.current!==t&&(s(t),o.current=t)},[t,o,s]),r}function E(e){const[i,r]=u.useState(void 0);return b(()=>{if(e){r({width:e.offsetWidth,height:e.offsetHeight});const t=new ResizeObserver(o=>{if(!Array.isArray(o)||!o.length)return;const s=o[0];let a,c;if("borderBoxSize"in s){const f=s.borderBoxSize,n=Array.isArray(f)?f[0]:f;a=n.inlineSize,c=n.blockSize}else a=e.offsetWidth,c=e.offsetHeight;r({width:a,height:c})});return t.observe(e,{box:"border-box"}),()=>t.unobserve(e)}else r(void 0)},[e]),i}export{k as C,E as a,A as u};

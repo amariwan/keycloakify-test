@@ -1,0 +1,11 @@
+import{j as e}from"./jsx-runtime-Cf8x2fCZ.js";import{r}from"./index-BlmOqGMO.js";import{B as l}from"./button-C_ykKUfv.js";import{D as m,a as p,b as h,d as o}from"./dropdown-menu-6x-QXDHJ.js";import{c}from"./createLucideIcon-C49h6iyD.js";/**
+ * @license lucide-react v0.475.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const u=[["path",{d:"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z",key:"a7tn18"}]],k=c("Moon",u);/**
+ * @license lucide-react v0.475.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const g=[["circle",{cx:"12",cy:"12",r:"4",key:"4exip2"}],["path",{d:"M12 2v2",key:"tus03m"}],["path",{d:"M12 20v2",key:"1lh1kg"}],["path",{d:"m4.93 4.93 1.41 1.41",key:"149t6j"}],["path",{d:"m17.66 17.66 1.41 1.41",key:"ptbguv"}],["path",{d:"M2 12h2",key:"1t8f8n"}],["path",{d:"M20 12h2",key:"1q8mjw"}],["path",{d:"m6.34 17.66-1.41 1.41",key:"1m8zz5"}],["path",{d:"m19.07 4.93-1.41 1.41",key:"1shlcs"}]],y=c("Sun",g);function f({className:d=""}){const[i,a]=r.useState(!1),s=t=>{switch(localStorage.setItem("app-theme",t),t){case"light":a(!1),document.documentElement.classList.remove("dark");break;case"dark":a(!0),document.documentElement.classList.add("dark");break;case"system":{const n=window.matchMedia("(prefers-color-scheme: dark)").matches;a(n),document.documentElement.classList.toggle("dark",n);break}}};return r.useEffect(()=>{const t=localStorage.getItem("app-theme");s(t||"system")},[]),e.jsx("div",{className:d,children:e.jsxs(m,{children:[e.jsx(p,{asChild:!0,children:e.jsxs(l,{variant:"secondary",size:"icon",children:[i?e.jsx(k,{className:"w-[1.2rem] transition-all"}):e.jsx(y,{className:"w-[1.2rem] transition-all"}),e.jsx("span",{className:"sr-only",children:"Toggle theme"})]})}),e.jsxs(h,{align:"end",children:[e.jsx(o,{onClick:()=>s("light"),children:"Light"}),e.jsx(o,{onClick:()=>s("dark"),children:"Dark"}),e.jsx(o,{onClick:()=>s("system"),children:"System"})]})]})})}f.__docgenInfo={description:"",methods:[],displayName:"ModeToggle",props:{className:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:'""',computed:!1}}}};export{f as M};
