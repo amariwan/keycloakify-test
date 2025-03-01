@@ -71,7 +71,7 @@ export default function UpdateEmail(props: UpdateEmailProps) {
   );
 }
 
-function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
+export function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
   const { kcClsx, i18n } = props;
   const { msg } = i18n;
 
