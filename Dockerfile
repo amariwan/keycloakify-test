@@ -8,14 +8,14 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y openjdk-17-jdk maven && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-COPY package.json ./
-RUN npm install --legacy-peer-deps
+    rm -rf /var/lib/apt/lists/* && \
+    npm install -g pnpm
 
 COPY . .
-RUN npm run build && \
-    npx keycloakify build
+
+RUN pnpm install  && \
+    pnpm run build && \
+    pnpm exec keycloakify build
 
 FROM quay.io/keycloak/keycloak:26.0
 

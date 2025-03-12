@@ -41,7 +41,7 @@ export const Default: Story = {
         keycloakifyVersion: "9.6.1",
         themeVersion: "1.0.10",
         themeType: "account",
-        themeName: "reha-inside-theme",
+        themeName: "keycloakify",
         pageId: "totp.ftl"
       }}
     />

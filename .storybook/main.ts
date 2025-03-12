@@ -24,7 +24,7 @@ export default {
   },
   staticDirs: ["../public"],
   features: {
-    storyStoreV7: true
+    storyStoreV7: false
   },
   docs: {
     autodocs: true,

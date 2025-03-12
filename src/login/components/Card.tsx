@@ -33,7 +33,7 @@ export default function cardDefault(props: TemplateProps<KcContext, I18n>) {
       <Card className="mt-5 mx-0 sm:mx-auto w-full max-w-md">
         <CardHeader>
           <CardTitle>
-            <h1 className="text-center text-4xl font-bold">{headerNode}</h1>
+            <h1 className="text-center text-3xl font-bold">{headerNode}</h1>
           </CardTitle>
           <CardDescription>
             {displayRequiredFields && (

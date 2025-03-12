@@ -5,11 +5,9 @@ import type { TemplateProps } from "keycloakify/login/TemplateProps";
 import CardDefault from "@/login/components/Card";
 
 export default function MainContent(props: TemplateProps<KcContext, I18n>) {
-  const { kcContext, i18n } = props;
-
-  const { msg } = i18n;
-
-  const { realm } = kcContext;
+  // const { kcContext, i18n } = props;
+  // const { msg } = i18n;
+  // const { realm } = kcContext;
 
   return (
     <>
@@ -26,7 +24,8 @@ export default function MainContent(props: TemplateProps<KcContext, I18n>) {
         />
         <div>
           <h1 className="contents text-center text-4xl font-extrabold  uppercase">
-            {msg("loginTitleHtml", realm.displayNameHtml)}
+            {/* {msg("loginTitleHtml", realm.displayNameHtml)} */}
+            REHA INSIDE
           </h1>
         </div>
       </div>
@@ -34,19 +33,26 @@ export default function MainContent(props: TemplateProps<KcContext, I18n>) {
         <div className="flex flex-col gap-6" {...props}>
           <CardDefault {...props} />
           <div className="text-balance text-center text-sm text-muted-foreground">
-            Bitte beachten Sie unsere{" "}
+            Bitte beachten Sie unser{" "}
             <a
-              href="/impressum"
+              href={`${import.meta.env.BASE_URL}/Impressum`}
               className="underline underline-offset-4 hover:text-primary"
             >
-              Nutzungsbedingungen
-            </a>{" "}
-            und unsere{" "}
+              Impressum
+            </a>
+            , unsere{" "}
             <a
-              href="/datenschutz"
+              href={`${import.meta.env.BASE_URL}/Datenschutzhinweise`}
               className="underline underline-offset-4 hover:text-primary"
             >
               Datenschutzrichtlinien
+            </a>{" "}
+            sowie die{" "}
+            <a
+              href={`${import.meta.env.BASE_URL}/Nutzungsbedingungen`}
+              className="underline underline-offset-4 hover:text-primary"
+            >
+              Nutzungsbedingungen
             </a>
             .
           </div>
