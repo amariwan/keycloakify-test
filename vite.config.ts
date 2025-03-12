@@ -4,13 +4,13 @@ import { keycloakify } from "keycloakify/vite-plugin";
 import * as path from "node:path";
 import { buildEmailTheme } from "keycloakify-emails";
 
-
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default defineConfig(({ mode }): UserConfig => {
-  const env = loadEnv(mode, process.cwd(), 'VITE_');
+  const env = loadEnv(mode, process.cwd(), "");
 
   return {
-    base: env.VITE_BASE_URL || '/',
+    base: env.BASE_URL || '/',
     plugins: [
       react(),
       keycloakify({
@@ -18,18 +18,18 @@ export default defineConfig(({ mode }): UserConfig => {
         extraThemeProperties: ["**/*.css"],
         keycloakVersionTargets: {
           "all-other-versions": `${env.THEME_NAME}.jar`,
-          "22-to-25": false
+          "22-to-25": false,
         },
         themeName: env.THEME_NAME,
         themeVersion: "1.0.0",
         postBuild: async (buildContext) => {
           await buildEmailTheme({
-            templatesSrcDirPath: import.meta.dirname + "/emails/templates",
+            templatesSrcDirPath: path.join(__dirname, "emails", "templates"),
             themeNames: buildContext.themeNames,
             keycloakifyBuildDirPath: buildContext.keycloakifyBuildDirPath,
-            i18nSourceFile: import.meta.dirname + "/emails/i18n.ts",
+            i18nSourceFile: path.join(__dirname, "emails", "i18n.ts"),
             locales: ["en", "de"],
-            cwd: import.meta.dirname,
+            cwd: __dirname,
             esbuild: {},
           });
         },
@@ -37,8 +37,8 @@ export default defineConfig(({ mode }): UserConfig => {
     ],
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src")
-      }
-    }
-  }
-})
+        "@": path.resolve(__dirname, "src"),
+      },
+    },
+  };
+});

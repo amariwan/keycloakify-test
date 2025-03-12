@@ -92,7 +92,7 @@ export const WithTotpEnabled: Story = {
         keycloakifyVersion: "9.6.1",
         themeVersion: "1.0.10",
         themeType: "account",
-        themeName: "reha-inside-theme",
+        themeName: "keycloakify",
         pageId: "totp.ftl"
       }}
     />
@@ -129,8 +129,7 @@ export const WithManualMode: Story = {
         },
         keycloakifyVersion: "9.6.1",
         themeVersion: "1.0.10",
-        themeType: "account",
-        themeName: "reha-inside-theme",
+        themeType: "account", themeName: "keycloakify",
         pageId: "totp.ftl"
       }}
     />
@@ -181,7 +180,7 @@ export const MoreThanOneTotpProviders: Story = {
         keycloakifyVersion: "9.6.1",
         themeVersion: "1.0.10",
         themeType: "account",
-        themeName: "reha-inside-theme",
+        themeName: "keycloakify",
         pageId: "totp.ftl"
       }}
     />
